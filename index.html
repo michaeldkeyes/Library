@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    
-  </div>
-  
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="library" id="library"></div>
+    <button id="add-book" class="add-book">Add New Book</button>
+    <div class="modal">
+      <form action="#" class="add-book-form">
+        <h2>Add Book</h2>
+        <button class="btn-close-form" type="button">&times</button>
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" />
+        <label for="author">Author</label>
+        <input id="author" type="text" name="author" />
+        <label for="pages">Number of Pages</label>
+        <input id="pages" type="text" name="pages" />
+        <div>
+          <label for="read">Read</label>
+          <input id="read" type="checkbox" name="read" />
+        </div>
+        <button id="add-book-form" class="add-book" type="button">
+          Add Book
+        </button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
