@@ -1,19 +1,21 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  info() {
+    return `${this.title} by ${this.author}, ${this.pages} pages, not read yet`;
+  }
+
+  toggleRead() {
+    this.read = !this.read;
+  }
 }
-
-Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.pages} pages, not read yet`;
-};
-
-Book.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
 
 const testBook = new Book("The Hobbit", "J.R.R Tolkien", 295, false);
 const testBook2 = new Book(
